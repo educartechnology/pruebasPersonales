@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>grupo 2</title>
+
+    <style>  
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 3px solid #dddddd;
+            text-align: left;
+            padding: 5px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /*ESTILO PARA CADA PERSONA */
+        .person-container {
+            border: 5px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        /* ESTILO PARA LAS IMAGENES */
+        .person-container img {
+            max-width: 100%;
+            height: auto;
+            opacity: 0.8;
+        }
+    </style>
+
+<script>
+    // Ensure the script is placed after the DOM content
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get all images within the person-container
+        var images = document.querySelectorAll('.person-container img');
+
+        // Add event listeners for each image
+        images.forEach(function (image) {
+            image.addEventListener('mouseover', function () {
+                // Scale the image on hover
+                this.style.transform = 'scale(1.9)';
+            });
+
+            image.addEventListener('mouseout', function () {
+                // Restore the original size on mouseout
+                this.style.transform = 'scale(1)';
+            });
+        });
+    });
+
+</script>
+
+
+  </head>
+  <body>
+    <h1>Datos integrantes del grupo 2</h1>
+
+  <!-- CONTAINER DE LOS INDICES DE LAS PERSONAS -->
+  <div class="person-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre alumno</th>
+                <th>Perfil</th>
+                <th>Git</th>
+                <th>LinkedIn</th>
+                <th>Notion</th>
+                <th>Descripcion</th>
+                <th>Contacto</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+
+
+ <!--              DATOS CHRISTIAN MC FARLAN                    -->    
+
+ <td>Christian Mc Farlan Rebolledo</td>
+ <td><a class="navbar-brand" href="#">
+     <img src="https://educartechnology.cl/wp-content/uploads/2024/02/Image20240221114725.jpg" alt="logo"></a></td>
+ <!-- LINCK ORDENADOS PARA CADA PERSONA, PARTO POR EL WEA -->
+ <td><a href="https://github.com/educartechnology" target="_blank">Enlace Git</a></td>
+ <td><a href="https://www.linkedin.com/in/christian-mc-farlan-rebolledo-7397522b3/" target="_blank">Enlace LinkedIn</a></td>
+ <td><a href="https://www.notion.so/Primeros-pasos-7d89451857a241d9af27b600dcbf3526" target="_blank">Enlace Notion</a></td>
+ <td><p>Hola, soy desarrollador amateur hace 3 años, actualmente desarrollo en FluterFlow con NOCODE, trabajo
+ independiente con nuevas APP.</p></td>
+ <!-- Button trigger modal -->
+ <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="cambiarContenido
+ ('CORREO_3@gmail.com')"> Contactar Usuario</button></td>
+
+</tbody>
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            
+
+
+            <!--  AQUI SI EL FORMULARIO PAJARON-->
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+<!--  FIN DEL FORMULARIO  -->
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function cambiarContenido(contenido1) {
+        // Cambiar el contenido del modal
+        document.getElementById('modalBody').innerHTML = contenido;
+    }
+</script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
